@@ -16,5 +16,5 @@ def get_projections_components(
         return (None, None)
 
     scal = matrix @ vector
-    projections = (scal/(np.linalg.norm(matrix, axis=-1) ** 2))[:, np.newaxis] * matrix
+    projections = (scal / (np.linalg.norm(matrix, axis=-1) ** 2))[:, np.newaxis] * matrix
     return projections, vector - projections
